@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>$(SolutionDir)\HotelZ.Web\bin\$(Configuration)</OutputPath>
+  </PropertyGroup>
+
+<ItemGroup>
+  <ProjectReference Include="..\..\HotelZ.Core\HotelZ.Core.Configuration\HotelZ.Core.Configuration.csproj" />
+</ItemGroup>
+
+</Project>
