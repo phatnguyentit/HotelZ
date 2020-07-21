@@ -1,5 +1,6 @@
 ﻿using HotelZ.Core.Configuration;
 using HotelZ.Module.Identity.Services;
+using HotelZ.Module.Identity.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

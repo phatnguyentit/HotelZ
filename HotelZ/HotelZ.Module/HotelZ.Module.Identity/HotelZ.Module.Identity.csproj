@@ -13,10 +13,6 @@
     <ProjectReference Include="..\..\HotelZ.Core\HotelZ.Core.Data\HotelZ.Core.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\" />
-  </ItemGroup>
-
 <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>$(SolutionDir)\HotelZ.Web\bin\$(Configuration)</OutputPath>
   </PropertyGroup>

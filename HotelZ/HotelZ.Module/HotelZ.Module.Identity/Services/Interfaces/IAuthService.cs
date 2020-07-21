@@ -1,4 +1,4 @@
-﻿namespace HotelZ.Module.Identity.Services
+﻿namespace HotelZ.Module.Identity.Services.Interfaces
 {
     public interface IAuthService
     {

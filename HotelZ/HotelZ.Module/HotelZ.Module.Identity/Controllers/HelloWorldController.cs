@@ -1,4 +1,5 @@
 ﻿using HotelZ.Module.Identity.Services;
+using HotelZ.Module.Identity.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelZ.Module.Identity.Controllers
