@@ -1,3 +1,4 @@
+using HotelZ.Initializer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 

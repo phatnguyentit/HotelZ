@@ -1,4 +1,4 @@
-using HotelZ.Core.Configuration.Extensions;
+using HotelZ.Initializer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,7 +9,7 @@ namespace HotelZ.Web
     public class Startup
     {
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services) => services.ConfigureHotelZServices();
+        public void ConfigureServices(IServiceCollection services) => services.RunServicesInitializer();
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -27,7 +27,23 @@ namespace HotelZ.Web
             }
 
             app.UseStaticFiles();
-            app.UseHotelZMiddlewares();
+
+            app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                   name: "defaultArea",
+                   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
+            });
         }
     }
 }
