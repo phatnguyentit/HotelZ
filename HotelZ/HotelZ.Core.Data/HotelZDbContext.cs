@@ -15,6 +15,8 @@ namespace HotelZ.Core.Data
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomType> RoomTypes { get; set; }
 
+        public DbSet<Hotel> Hotels { get; set; }
+
         public override int SaveChanges()
         {
             var entries = ChangeTracker.Entries().Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
@@ -25,7 +27,7 @@ namespace HotelZ.Core.Data
                 {
                     ((BaseEntity)entry).CreatedDateTime = DateTime.Now;
                 }
-                else if(entry.State == EntityState.Modified)
+                else if (entry.State == EntityState.Modified)
                 {
                     ((BaseEntity)entry).UpdatedDateTime = DateTime.Now;
                 }

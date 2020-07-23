@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HotelZ.Core.Data\HotelZ.Core.Data.csproj" />
     <ProjectReference Include="..\HotelZ.Initializer\HotelZ.Initializer.csproj" />
   </ItemGroup>
 

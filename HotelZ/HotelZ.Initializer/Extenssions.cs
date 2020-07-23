@@ -12,7 +12,7 @@ namespace HotelZ.Initializer
             var configuration = services.BuildServiceProvider().GetRequiredService<IConfiguration>();
 
             var initializers = new ServiceInitializerQueues(services, configuration);
-            initializers.Queue(new CoreServiceInitializer());
+            initializers.Queue(new CoreInitializer());
             initializers.Queue(new ModuleInitializer());
             
             initializers.Execute();
