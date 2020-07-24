@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HotelZ.Core.Configuration\HotelZ.Core.Configuration.csproj" />
+    <ProjectReference Include="..\HotelZ.Core\HotelZ.Core.csproj" />
   </ItemGroup>
 
 </Project>

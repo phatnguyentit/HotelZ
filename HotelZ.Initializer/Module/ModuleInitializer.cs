@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Loader;
-using HotelZ.Core.Configuration;
-using HotelZ.Core.Configuration.Extensions;
+using HotelZ.Core;
+using HotelZ.Core.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
-using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -46,11 +45,11 @@ namespace HotelZ.Initializer.Module
 
                     return assembly;
                 }).ToList();
-                
+
                 moduleAssemblies.ForEach(md =>
                 {
                     md.GetTypes().Where(t => !t.IsInterface && typeof(BaseModuleStartup).IsAssignableFrom(t))
-                        .Select(t => (BaseModuleStartup)Activator.CreateInstance(t)).ToList()
+                        .Select(t => (BaseModuleStartup) Activator.CreateInstance(t)).ToList()
                         .ForEach(m =>
                         {
                             m.ConfigureServices(ServiceCollection, Configuration);
@@ -65,6 +64,5 @@ namespace HotelZ.Initializer.Module
                 throw new InvalidOperationException("Can not initialize modules");
             }
         }
-
     }
 }

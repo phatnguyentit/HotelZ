@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using HotelZ.Core.Configuration.Interfaces;
+using HotelZ.Core.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HotelZ.Initializer.Core

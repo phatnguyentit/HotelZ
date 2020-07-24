@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{69B294B4-1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelZ.Initializer", "HotelZ.Initializer\HotelZ.Initializer.csproj", "{1EBA9DFC-42F1-4478-90A3-5AEE9D3C072F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelZ.Core.Configuration", "HotelZ.Core.Configuration\HotelZ.Core.Configuration.csproj", "{684AA276-3F43-4161-A6A6-EC655F7536FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelZ.Core", "HotelZ.Core\HotelZ.Core.csproj", "{684AA276-3F43-4161-A6A6-EC655F7536FF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelZ.Core.Data", "HotelZ.Core.Data\HotelZ.Core.Data.csproj", "{1E39BFEA-3A30-4DDE-A7C5-A452B93CA06E}"
 EndProject

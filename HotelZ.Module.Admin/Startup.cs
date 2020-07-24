@@ -1,5 +1,4 @@
-﻿using HotelZ.Core.Configuration;
-using Microsoft.AspNetCore.Routing;
+﻿using HotelZ.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,6 +8,7 @@ namespace HotelZ.Module.Admin
     {
         public override void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
+            
         }
     }
 }

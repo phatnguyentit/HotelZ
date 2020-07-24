@@ -9,11 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HotelZ.Core.Configuration\HotelZ.Core.Configuration.csproj" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <ProjectReference Include="..\HotelZ.Core\HotelZ.Core.csproj" />
   </ItemGroup>
 
 </Project>

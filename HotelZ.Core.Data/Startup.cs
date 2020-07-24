@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using HotelZ.Core.Configuration.Interfaces;
+using HotelZ.Core.Interfaces;
 
 namespace HotelZ.Core.Data
 {

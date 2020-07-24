@@ -1,4 +1,4 @@
-﻿using HotelZ.Core.Configuration;
+﻿using HotelZ.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

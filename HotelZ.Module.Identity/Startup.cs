@@ -1,4 +1,4 @@
-﻿using HotelZ.Core.Configuration;
+﻿using HotelZ.Core;
 using HotelZ.Module.Identity.Services;
 using HotelZ.Module.Identity.Services.Interfaces;
 using Microsoft.AspNetCore.Identity.UI.Services;
