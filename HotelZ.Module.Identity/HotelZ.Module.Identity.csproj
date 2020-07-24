@@ -13,6 +13,10 @@
     <ProjectReference Include="..\HotelZ.Core.Data\HotelZ.Core.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\HelloWorld\Index.cshtml" />
+  </ItemGroup>
+
 <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>$(SolutionDir)\HotelZ.Web\bin\$(Configuration)</OutputPath>
   </PropertyGroup>

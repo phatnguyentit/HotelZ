@@ -16,27 +16,6 @@ namespace HotelZ.Core.Data
         {
             services.AddDbContext<HotelZDbContext>(options =>
                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddIdentity<ApplicationUser, ApplicationRole>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<HotelZDbContext>()
-                .AddDefaultTokenProviders();
-
-            services.AddAuthentication(opt =>
-            {
-                opt.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                opt.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-            })
-            .AddCookie(opt =>
-            {
-                opt.LoginPath = "/Identity/Account/Login";
-                opt.LogoutPath = "/Identity/Account/Logout";
-                opt.ExpireTimeSpan = TimeSpan.FromMinutes(30);
-            })
-            .AddGoogle(opt =>
-            {
-                opt.ClientId = configuration["Authentication:Google:ClientId"];
-                opt.ClientSecret = configuration["Authentication:Google:ClientSecret"];
-            });
         }
     }
 }
