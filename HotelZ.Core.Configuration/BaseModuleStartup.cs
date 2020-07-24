@@ -13,10 +13,5 @@ namespace HotelZ.Core.Configuration
 
         public virtual void RegisterControllers(IServiceCollection services, List<Type> controllerTypes)
             => controllerTypes.ForEach(controller => services.AddTransient(controller, controller));
-
-        public virtual void ConfigEndpointRoute(IEndpointRouteBuilder endpointRouteBuilder)
-        {
-
-        }
     }
 }
