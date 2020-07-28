@@ -10,20 +10,21 @@ namespace HotelZ.Web
     {
         public static void Main(string[] args)
         {
-            Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(builder =>
-            {
-                builder.UseStaticWebAssets();
-                builder.UseStartup<Startup>();
-            })
-            .ConfigureAppConfiguration((ctx, builder) =>
-            {
-                var config = builder.Build();
-                builder.AddDatabaseConfiguration(optionBuilder =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((ctx, builder) =>
                 {
-                    optionBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
-                });
-            })
-            .Build().Run();
+                    var config = builder.Build();
+                    builder.AddDatabaseConfiguration(optionBuilder =>
+                    {
+                        optionBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+                    });
+                })
+                .ConfigureWebHostDefaults(builder =>
+                {
+                    builder.UseStaticWebAssets();
+                    builder.UseStartup<Startup>();
+
+                }).Build().Run();
         }
     }
 }

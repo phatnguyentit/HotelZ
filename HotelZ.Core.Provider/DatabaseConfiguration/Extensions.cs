@@ -1,9 +1,6 @@
-﻿using HotelZ.Core.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HotelZ.Core.Provider.DatabaseConfiguration
 {

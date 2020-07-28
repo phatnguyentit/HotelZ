@@ -10,11 +10,11 @@ namespace HotelZ.Core.Provider.DatabaseConfiguration
 {
     public class DatabaseConfigurationProvider : ConfigurationProvider
     {
-        private readonly Action<DbContextOptionsBuilder<HotelZDbContext>> _dbContextOptions;
+        private readonly Action<DbContextOptionsBuilder> _dbContextOptions;
 
-        public DatabaseConfigurationProvider(Action<DbContextOptionsBuilder<HotelZDbContext>> dbContextOptionsBuilder)
+        public DatabaseConfigurationProvider(Action<DbContextOptionsBuilder> dbContextOptionsBuilder)
         {
-            this._dbContextOptions = dbContextOptionsBuilder;
+            _dbContextOptions = dbContextOptionsBuilder;
         }
 
         public override void Load()
