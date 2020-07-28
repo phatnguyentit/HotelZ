@@ -8,6 +8,7 @@ namespace HotelZ.Core.Provider
     {
         public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
+            
         }
     }
 }

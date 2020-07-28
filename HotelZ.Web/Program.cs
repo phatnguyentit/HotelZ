@@ -1,5 +1,7 @@
-using HotelZ.Initializer;
+using HotelZ.Core.Provider.DatabaseConfiguration;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 namespace HotelZ.Web
@@ -12,7 +14,16 @@ namespace HotelZ.Web
             {
                 builder.UseStaticWebAssets();
                 builder.UseStartup<Startup>();
-            }).Build().Run();
+            })
+            .ConfigureAppConfiguration((ctx, builder) =>
+            {
+                var config = builder.Build();
+                builder.AddDatabaseConfiguration(optionBuilder =>
+                {
+                    optionBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+                });
+            })
+            .Build().Run();
         }
     }
 }

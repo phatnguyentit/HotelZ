@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace HotelZ.Core.Data
@@ -16,6 +17,7 @@ namespace HotelZ.Core.Data
         public DbSet<RoomType> RoomTypes { get; set; }
 
         public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<Configuration> Configurations { get; set; }
 
         public override int SaveChanges()
         {

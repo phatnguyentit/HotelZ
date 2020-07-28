@@ -9,10 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\HotelZ.Core.Data\HotelZ.Core.Data.csproj" />
     <ProjectReference Include="..\HotelZ.Core\HotelZ.Core.csproj" />
   </ItemGroup>
 
